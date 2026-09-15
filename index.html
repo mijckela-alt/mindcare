@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindCare — психологическая клиника в Одессе</title>
+<meta name="description" content="MindCare — частная психологическая клиника в Одессе. Индивидуальные, семейные и онлайн-консультации. Конфиденциально, без очередей.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#hero" class="logo">
+      <span class="logo-mark">M</span>
+      <span class="logo-text">MindCare</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#about">О клинике</a>
+      <a href="#services">Услуги</a>
+      <a href="#specialists">Специалисты</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:+380671234567" class="header-phone">+380 (67) 123-45-67</a>
+      <button class="btn btn-primary" data-open-modal>Записаться</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Психологическая клиника в Одессе</span>
+        <h1>MindCare — поддержка, которая приходит вовремя</h1>
+        <p class="hero-lead">
+          Индивидуальные, семейные и онлайн-консультации с опытными психологами.
+          Спокойная обстановка, полная конфиденциальность и запись без ожидания.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-accent btn-lg" data-open-modal>Записаться на консультацию</button>
+          <a href="#services" class="btn btn-ghost btn-lg">Смотреть услуги</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <strong>7+ лет</strong>
+            <span>работаем в Одессе</span>
+          </div>
+          <div class="trust-item">
+            <strong>1200+</strong>
+            <span>проведённых консультаций</span>
+          </div>
+          <div class="trust-item">
+            <strong>100%</strong>
+            <span>конфиденциально</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <div class="hero-panel-head">
+          <span class="hero-panel-title">Что важно знать</span>
+          <span class="hero-panel-note">перед первой встречей</span>
+        </div>
+
+        <ul class="hero-panel-list">
+          <li>
+            <span class="hero-panel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21c0-6.6 5.4-12 12-12h6v3a12 12 0 0 1-12 12H3z"></path>
+                <path d="M3 21c3-6 7.5-9.5 13-11"></path>
+              </svg>
+            </span>
+            <div>
+              <strong>Спокойный темп</strong>
+              <span>Без спешки, советов и оценок — говорим столько, сколько нужно вам.</span>
+            </div>
+          </li>
+          <li>
+            <span class="hero-panel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="10" width="16" height="10" rx="2.5"></rect>
+                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+              </svg>
+            </span>
+            <div>
+              <strong>Полная конфиденциальность</strong>
+              <span>Всё сказанное остаётся в кабинете: ни записей, ни передачи данных.</span>
+            </div>
+          </li>
+          <li>
+            <span class="hero-panel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="12" rx="2.5"></rect>
+                <path d="M8 20h8M12 16v4"></path>
+              </svg>
+            </span>
+            <div>
+              <strong>Очно и онлайн</strong>
+              <span>Кабинет в центре Одессы или видеосессия из любой точки мира.</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="hero-panel-foot">
+          <span>Пн–Сб: 09:00–20:00</span>
+          <span>Греческая площадь, 10</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">О клинике</span>
+        <h2>Почему выбирают MindCare</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="advantage-card">
+          <span class="advantage-icon">🎓</span>
+          <h3>Опытные специалисты</h3>
+          <p>Все психологи имеют профильное образование, регулярно проходят супервизии и повышение квалификации.</p>
+        </div>
+        <div class="advantage-card">
+          <span class="advantage-icon">🤝</span>
+          <h3>Индивидуальный подход</h3>
+          <p>Подбираем формат и специалиста под конкретный запрос — нет универсальных решений «для всех».</p>
+        </div>
+        <div class="advantage-card">
+          <span class="advantage-icon">💻</span>
+          <h3>Очно и онлайн</h3>
+          <p>Приходите в кабинет в центре Одессы или подключайтесь на сессию из любой точки мира.</p>
+        </div>
+        <div class="advantage-card">
+          <span class="advantage-icon">🗓️</span>
+          <h3>Удобная запись</h3>
+          <p>Записаться можно на сайте за минуту — без звонков и ожидания на линии.</p>
+        </div>
+      </div>
+
+      <div class="confidentiality">
+        <div class="confidentiality-icon">🔒</div>
+        <div>
+          <h3>Конфиденциальность — наш приоритет</h3>
+          <p>
+            Всё, что происходит на сессии, остаётся между вами и специалистом. Мы не передаём данные третьим
+            лицам, не ведём записи разговоров и не разглашаем факт обращения в клинику без вашего письменного
+            согласия — это касается и работы с близкими, семьями и подростками.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section-muted" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Услуги</span>
+        <h2>Форматы консультаций</h2>
+        <p class="section-lead">Выберите формат, который подходит именно вам — можно менять его в любой момент.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="service-icon">🧑</span>
+          <h3>Индивидуальная консультация</h3>
+          <p>Личная работа со взрослым или подростком: тревожность, отношения, самооценка, выгорание, кризисы.</p>
+          <ul class="service-meta">
+            <li>50 минут</li>
+            <li>Очно или онлайн</li>
+          </ul>
+          <div class="service-price">900 грн</div>
+          <button class="btn btn-outline" data-open-modal data-service="Индивидуальная консультация">Записаться</button>
+        </article>
+
+        <article class="service-card service-card-featured">
+          <span class="service-badge">Популярно</span>
+          <span class="service-icon">👨‍👩‍👧</span>
+          <h3>Семейная консультация</h3>
+          <p>Работа с парой или всей семьёй: конфликты, кризисы отношений, воспитание, развод, взаимопонимание.</p>
+          <ul class="service-meta">
+            <li>80 минут</li>
+            <li>Очно или онлайн</li>
+          </ul>
+          <div class="service-price">1400 грн</div>
+          <button class="btn btn-accent" data-open-modal data-service="Семейная консультация">Записаться</button>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">💻</span>
+          <h3>Онлайн-консультация</h3>
+          <p>Полноценная сессия по видеосвязи — из дома, офиса или в поездке. Формат ничем не отличается от очного.</p>
+          <ul class="service-meta">
+            <li>50 минут</li>
+            <li>Любая точка мира</li>
+          </ul>
+          <div class="service-price">800 грн</div>
+          <button class="btn btn-outline" data-open-modal data-service="Онлайн-консультация">Записаться</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALISTS -->
+  <section class="section" id="specialists">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Специалисты</span>
+        <h2>Наши психологи</h2>
+      </div>
+
+      <div class="specialists-grid">
+        <article class="specialist-card">
+          <div class="specialist-photo" style="--avatar-bg:#EADFD3;--avatar-color:#8A5A3B">ОК</div>
+          <h3>Ольга Коваленко</h3>
+          <span class="specialist-role">Семейный психолог</span>
+          <span class="specialist-exp">Опыт работы — 9 лет</span>
+          <p class="specialist-focus">Отношения в паре, конфликты, кризисы семьи, развод</p>
+          <button class="btn btn-outline btn-sm" data-open-modal data-specialist="Ольга Коваленко">Записаться</button>
+        </article>
+
+        <article class="specialist-card">
+          <div class="specialist-photo" style="--avatar-bg:#DCE6E1;--avatar-color:#3F6B57">ІП</div>
+          <h3>Игорь Петренко</h3>
+          <span class="specialist-role">Клинический психолог</span>
+          <span class="specialist-exp">Опыт работы — 12 лет</span>
+          <p class="specialist-focus">Тревожность, панические атаки, депрессивные состояния</p>
+          <button class="btn btn-outline btn-sm" data-open-modal data-specialist="Игорь Петренко">Записаться</button>
+        </article>
+
+        <article class="specialist-card">
+          <div class="specialist-photo" style="--avatar-bg:#EDE0EE;--avatar-color:#6C4A8A">МС</div>
+          <h3>Марина Соколова</h3>
+          <span class="specialist-role">Детский и подростковый психолог</span>
+          <span class="specialist-exp">Опыт работы — 7 лет</span>
+          <p class="specialist-focus">Адаптация, самооценка подростков, отношения с родителями</p>
+          <button class="btn btn-outline btn-sm" data-open-modal data-specialist="Марина Соколова">Записаться</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section section-muted" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Отзывы</span>
+        <h2>Что говорят наши клиенты</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>«Долго не решалась пойти к психологу, но здесь с первой встречи почувствовала себя спокойно.
+          Ольга помогла разобраться в отношениях с мужем — сейчас нам обоим легче слышать друг друга.»</p>
+          <div class="review-author">Анна, 34 года</div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>«Ходил на онлайн-консультации из другого города — формат оказался удобным и совсем не хуже очного.
+          Игорь Владимирович помог справиться с тревожностью на работе за несколько месяцев.»</p>
+          <div class="review-author">Дмитрий, 29 лет</div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>«Сын-подросток сначала отказывался идти, но Марина нашла подход буквально за одну сессию.
+          Спасибо за терпение и деликатность в такой непростой теме.»</p>
+          <div class="review-author">Елена, 45 лет</div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>«Записаться было проще, чем к стоматологу — заполнила форму на сайте, в тот же день перезвонили
+          и подобрали удобное время. Отдельное спасибо за атмосферу в кабинете.»</p>
+          <div class="review-author">Виктория, 27 лет</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Частые вопросы</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Как проходит первая консультация?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Первая встреча — это знакомство: психолог задаёт вопросы о вашем запросе, ожиданиях и истории,
+            вы вместе определяете формат дальнейшей работы. Никакой «диагностики с ходу» — только диалог.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Это действительно конфиденциально?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Да. Мы не сообщаем о факте обращения третьим лицам, не ведём аудиозаписи сессий без согласия
+            и не передаём данные клиентов вне клиники. Подробнее — в разделе «О клинике».</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Чем отличается онлайн-консультация от очной?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Только форматом связи — по содержанию и продолжительности сессии полностью совпадают.
+            Онлайн-формат подходит, если вам неудобно приезжать в кабинет или вы находитесь в другом городе.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Сколько нужно консультаций, чтобы увидеть результат?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Зависит от запроса: разовая консультация помогает разобраться в конкретной ситуации, а длительная
+            работа над паттернами обычно занимает от нескольких недель до нескольких месяцев. Психолог обсудит
+            примерный план на первой встрече.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Можно ли поменять специалиста, если не подошёл контакт?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Конечно. Комфортный контакт со специалистом — важное условие эффективной работы, поэтому смену
+            психолога можно обсудить в любой момент без объяснений.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Как оплатить консультацию?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Наличными или картой в кабинете, а также переводом перед онлайн-сессией. Реквизиты пришлём
+            после подтверждения записи.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="section section-muted" id="contacts">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Контакты и запись</span>
+        <h2>Как нас найти</h2>
+      </div>
+
+      <div class="contacts-grid">
+        <div class="contacts-info">
+          <div class="contact-row">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Адрес</strong>
+              <span>Одесса, Греческая площадь, 10</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">📞</span>
+            <div>
+              <strong>Телефон</strong>
+              <a href="tel:+380671234567">+380 (67) 123-45-67</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:hello@mindcare.ua">hello@mindcare.ua</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">🕒</span>
+            <div>
+              <strong>График работы</strong>
+              <span>Пн–Сб: 09:00–20:00</span>
+            </div>
+          </div>
+
+          <button class="btn btn-accent btn-lg" data-open-modal>Записаться на консультацию</button>
+        </div>
+
+        <div class="contacts-map">
+          <iframe
+            title="Карта — Одесса, Греческая площадь, 10"
+            src="https://maps.google.com/maps?q=%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%B0%2C%20%D0%93%D1%80%D0%B5%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C%2C%2010&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark">M</span>
+      <span class="logo-text">MindCare</span>
+    </div>
+    <p>© 2026 MindCare. Психологическая клиника в Одессе.</p>
+  </div>
+</footer>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">✕</button>
+
+    <div class="modal-body" id="modalBody">
+      <h3 id="modalTitle">Запись на консультацию</h3>
+      <p class="modal-sub">Оставьте контакты — мы свяжемся с вами, чтобы подтвердить удобное время.</p>
+
+      <form id="bookingForm" novalidate>
+        <label>
+          Имя
+          <input type="text" name="name" required placeholder="Как к вам обращаться">
+        </label>
+        <label>
+          Телефон
+          <input type="tel" name="phone" required placeholder="+380 (__) ___-__-__">
+        </label>
+        <label>
+          Услуга
+          <select name="service" id="modalServiceSelect">
+            <option>Индивидуальная консультация</option>
+            <option>Семейная консультация</option>
+            <option>Онлайн-консультация</option>
+          </select>
+        </label>
+        <label>
+          Специалист (по желанию)
+          <input type="text" name="specialist" id="modalSpecialistInput" placeholder="Без предпочтений">
+        </label>
+        <label>
+          Удобное время
+          <input type="text" name="time" placeholder="Например: будни после 18:00">
+        </label>
+        <label>
+          Комментарий
+          <textarea name="comment" rows="3" placeholder="Коротко о запросе — по желанию"></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-accent btn-lg btn-block">Отправить заявку</button>
+        <p class="modal-privacy">Отправляя форму, вы соглашаетесь на обработку данных. Мы никому их не передаём.</p>
+      </form>
+    </div>
+
+    <div class="modal-success" id="modalSuccess" hidden>
+      <span class="modal-success-icon">✓</span>
+      <h3>Спасибо!</h3>
+      <p>Заявка принята. Мы свяжемся с вами в ближайшее рабочее время, чтобы подтвердить запись.</p>
+      <button class="btn btn-outline" id="modalSuccessClose">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
