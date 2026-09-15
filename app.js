@@ -1,3 +1,47 @@
+// Язык сайта
+const LANG_KEY = 'mindcare-lang';
+let currentLang = 'ru';
+
+function t(key) {
+  return TRANSLATIONS[currentLang][key] ?? TRANSLATIONS.ru[key] ?? '';
+}
+
+function applyLang(lang) {
+  currentLang = TRANSLATIONS[lang] ? lang : 'ru';
+  document.documentElement.lang = currentLang;
+  document.title = t('meta.title');
+  document.getElementById('metaDescription').setAttribute('content', t('meta.description'));
+
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    el.textContent = t(el.dataset.i18n);
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    el.placeholder = t(el.dataset.i18nPlaceholder);
+  });
+  document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+    el.setAttribute('aria-label', t(el.dataset.i18nAria));
+  });
+  document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+    el.title = t(el.dataset.i18nTitle);
+  });
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    const active = btn.dataset.lang === currentLang;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+
+  try { localStorage.setItem(LANG_KEY, currentLang); } catch (e) {}
+}
+
+document.querySelectorAll('.lang-btn').forEach((btn) => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+let savedLang = null;
+try { savedLang = localStorage.getItem(LANG_KEY); } catch (e) {}
+applyLang(savedLang || 'ru');
+
 // Мобильное меню
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
@@ -38,9 +82,10 @@ function openModal(trigger) {
   modalSuccess.hidden = true;
 
   const service = trigger && trigger.dataset.service;
-  const specialist = trigger && trigger.dataset.specialist;
   if (service) serviceSelect.value = service;
-  specialistInput.value = specialist || '';
+  // Имя берётся из карточки, чтобы оно было на текущем языке
+  const specialistCard = trigger && trigger.closest('.specialist-card');
+  specialistInput.value = specialistCard ? specialistCard.querySelector('h3').textContent.trim() : '';
 
   overlay.classList.add('open');
   document.body.classList.add('modal-open');
@@ -93,11 +138,11 @@ form.addEventListener('submit', (e) => {
   let valid = true;
 
   if (name.value.trim().length < 2) {
-    showError(name, 'Укажите имя');
+    showError(name, t('form.err.name'));
     valid = false;
   }
   if (phone.value.replace(/\D/g, '').length < 10) {
-    showError(phone, 'Укажите корректный номер телефона');
+    showError(phone, t('form.err.phone'));
     valid = false;
   }
   if (!valid) return;
