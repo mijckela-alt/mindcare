@@ -322,7 +322,7 @@ img, iframe { max-width: 100%; }
   top: 18px; right: 18px;
   background: var(--accent);
   color: #fff;
-  font-size: .72rem;
+  font-size: .75rem;
   font-weight: 700;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -468,6 +468,7 @@ img, iframe { max-width: 100%; }
 .contact-row strong { display: block; font-size: .85rem; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
 .contact-row span, .contact-row a { font-size: 1.02rem; font-weight: 600; }
 .contact-row a:hover { color: var(--accent); }
+.contacts-info .btn { width: 100%; white-space: normal; text-align: center; padding-inline: 18px; }
 
 .contacts-map {
   border-radius: var(--radius);
@@ -579,12 +580,17 @@ img, iframe { max-width: 100%; }
 body.modal-open { overflow: hidden; }
 
 /* ===== Адаптив ===== */
+@media (max-width: 980px), (pointer: coarse) {
+  .lang-btn { min-width: 42px; min-height: 36px; }
+  .contact-row a { display: inline-block; padding-block: 6px; }
+}
+
 @media (max-width: 980px) {
   .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 34px; }
   .hero-panel { max-width: 560px; }
-  .about-grid { grid-template-columns: repeat(2, 1fr); }
-  .services-grid, .specialists-grid { grid-template-columns: 1fr; }
-  .contacts-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-grid, .specialists-grid { grid-template-columns: minmax(0, 1fr); }
+  .contacts-grid { grid-template-columns: minmax(0, 1fr); }
 
   .main-nav {
     position: absolute;
@@ -605,10 +611,20 @@ body.modal-open { overflow: hidden; }
   .header-actions { margin-left: auto; }
 }
 
+/* Планшеты: три колонки карточек и контакты рядом с картой */
+@media (min-width: 700px) and (max-width: 980px) {
+  .services-grid, .specialists-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .service-card, .specialist-card { padding: 24px 18px; }
+  .service-price { font-size: 1.45rem; }
+  .contacts-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+  .contacts-map { align-self: stretch; }
+}
+
 @media (max-width: 640px) {
   .section { padding: 60px 0; }
   .hero { padding: 54px 0 62px; }
-  .about-grid, .reviews-grid { grid-template-columns: 1fr; }
+  .about-grid, .reviews-grid { grid-template-columns: minmax(0, 1fr); }
+  .btn-lg { white-space: normal; text-align: center; }
   .hero-trust { gap: 22px; }
   .hero-panel { padding: 22px 18px 18px; border-radius: 22px; }
   .hero-panel-head { flex-wrap: wrap; gap: 10px 12px; }
@@ -621,7 +637,10 @@ body.modal-open { overflow: hidden; }
   .hero-panel-foot-divider { display: none; }
   .hero-panel-foot-item { white-space: normal; }
   .confidentiality { flex-direction: column; gap: 14px; padding: 26px 22px; }
-  .modal { padding: 30px 22px; }
+  .modal { padding: 26px 20px; }
+  .modal-sub { margin-bottom: 16px; }
+  #bookingForm label { margin-bottom: 10px; }
+  #bookingForm input, #bookingForm select, #bookingForm textarea { padding: 10px 12px; }
   .header-inner { gap: 12px; }
   .header-actions { gap: 8px; }
   .header-actions .btn-primary { padding: 9px 14px; font-size: .88rem; }
@@ -630,4 +649,10 @@ body.modal-open { overflow: hidden; }
 
 @media (max-width: 420px) {
   .site-header .logo-text { display: none; }
+}
+
+/* Узкие телефоны (320px): кнопка записи есть сразу под шапкой, в самой шапке ей не хватает места */
+@media (max-width: 374px) {
+  .container { padding: 0 16px; }
+  .header-actions .btn-primary { display: none; }
 }
